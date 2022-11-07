@@ -1,38 +1,183 @@
-.App {
+body{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  /* height: 100vh;
+  width: 100%; */
+  position: absolute;  
+  width: 100% !important;     
+  height: 100% !important;
+  background: linear-gradient(-70deg, #008ab0,rgb(7, 225, 203), #7008a3,#f48e21, #23d5ab); 
+  background-size: 300% 300%;
+  animation: color 5s ease-in-out infinite;
+}
+html, body{
+  width: 100%;     
+  height: 100%;
+}
+@keyframes color {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  1000%{
+    background-position: 0 50%;
+  }
+}
+
+.nav-link{
+  color: white !important;
+  font-family: 'Bakbak One', cursive;
+}
+
+.navbar{
+  margin-bottom: 5%;
+}
+
+#navlogo{
+  width: 150px;
+  height: auto;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainpart, .guidepart{
+  background-color: white;
+  border-radius: 10px;
+  width: 75%;
+  height: auto;
+  position: relative;
+  top: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-bottom: 10px;
+}
+
+.guidepart{
+  width: 100%;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.col{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 3%;
+}
+
+h5{
+  padding-top: 15px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 30px;
+  text-shadow: rgb(8, 142, 137) 1px 0.5px;
+}
+.row{
+  padding: 0;
+  margin: 0;
+}
+
+.btn{
+  height: 35px;
+  background-color: #05d2b3;
+  font-size: 15px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.btn:hover{
   color: white;
+  background-color: rgb(21, 169, 164);
+  box-shadow:rgba(0, 0, 0, 0.19) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 3px 3px;
 }
 
-.App-link {
-  color: #61dafb;
+#results{
+  font-size: 20px;
+  text-align: left;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input{
+  font-size: 18px;
+  width: 100%;
+  border: 0.5px solid rgba(128, 128, 128, 0.5);
+  padding: 3px;
+}
+
+.heading{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.headp{
+  font-size: 11px;
+  color: grey;
+  margin: 0;
+}
+hr{
+  margin: 5px 0px 5px 0px;
+}
+.resp{
+  font-size: 15px;
+  margin: 0;
+}
+#percentage{
+  color: green;
+}
+
+.guideDiv{
+  padding: 15px;
+}
+#how{
+  width: 58vw;
+  padding: 3px;
+}
+li a{
+  margin-right: 10px;
+}
+
+@media only screen and (min-width:320px) and (max-width:425px){
+  h5{
+    font-size: 18px;
   }
-  to {
-    transform: rotate(360deg);
+  .btn{
+    font-size: 13px;
+  }
+  input{
+    font-size: 15px;
+  }
+  .nav-link{
+    font-size: 14px;
+  }
+  #how{
+    width: 85vw;
+    padding: 3px;
+  }
+}
+@media only screen and (min-width:426px) and (max-width:525px){
+  h5{
+    font-size: 24px;
+  }
+  .btn{
+    font-size: 14px;
+  }
+  input{
+    font-size: 17px;
+  }
+  #how{
+    width: 90vw;
+    padding: 3px;
+  }
+}
+@media only screen and (min-width:2191px){
+  #how{
+    width: 45vw;
+    padding: 3px;
   }
 }
