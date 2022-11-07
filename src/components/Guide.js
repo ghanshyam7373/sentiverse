@@ -7,7 +7,7 @@ const Guide = () => {
                 <div className="guideDiv">
                     <h4>What is Sentiment Analysis?</h4>
                     <p id="sentpara">The process of computationally identifying and categorizing opinions expressed in a piece of text, especially in order to determine whether the writer's attitude towards a particular topic, product, etc. is positive, negative, or neutral.</p>
-                    <img src="how.png" alt="" id="how" />
+                    <img src="https://res.cloudinary.com/duoe2yt88/image/upload/v1667856839/Images/how_epl77n.png" alt="" id="how" />
                     <h4>Positive Sentiment</h4>
                             <p>This is usually referred to as graded or fine-grained sentiment analysis, and could be used to interpret 5-star ratings.</p>
                         <h4>Neutral Sentiment</h4>

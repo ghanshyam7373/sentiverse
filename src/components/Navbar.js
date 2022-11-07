@@ -5,7 +5,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg">
   <div className="container-fluid">
-    <a className="navbar-brand" href="/"><img id="navlogo" src="logo white.png" alt="" /></a>
+    <a className="navbar-brand" href="/"><img id="navlogo" src="https://res.cloudinary.com/duoe2yt88/image/upload/v1667856564/Images/logo_white_pgpemx.png" alt="" /></a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
