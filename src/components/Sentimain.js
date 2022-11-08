@@ -1,9 +1,8 @@
 import React from 'react'
-import APIKEY from '../info';
 import { useState } from 'react';
 
 var myHeaders = new Headers();
-myHeaders.append("apikey", APIKEY);
+myHeaders.append("apikey", process.env.REACT_APP_API_URL);
 
 
 const Sentimain = () => {
@@ -30,7 +29,6 @@ const Sentimain = () => {
             .then(response => response.json())
             .then(response => {
                 setTag(response.sentiment);
-                console.log(response.sentiment);
                 setConf(response.confidence);
             })
             .catch(error => console.log('error', error));
