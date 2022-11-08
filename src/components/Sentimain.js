@@ -9,13 +9,15 @@ const Sentimain = () => {
 
     const [tag, setTag] = useState("positive");
     const [conf, setConf] = useState("99.1");
+    const [loading, setLoading] = useState(false);
 
     const sentiAnalysis = () => {
+        setLoading(true);
         var text = document.getElementById('inputText').value
-        if(text){
+        if (text) {
             var raw = document.getElementById('inputText').value;
         }
-        else{
+        else {
             raw = ""
         }
         var requestOptions = {
@@ -24,15 +26,16 @@ const Sentimain = () => {
             headers: myHeaders,
             body: raw
         };
-    
+
         fetch("https://api.apilayer.com/sentiment/analysis", requestOptions)
             .then(response => response.json())
             .then(response => {
+                setLoading(false);
                 setTag(response.sentiment);
-                setConf(response.confidence);
+                setConf(response.confidence.toFixed(2));
             })
             .catch(error => console.log('error', error));
-    
+
     }
 
 
@@ -54,10 +57,16 @@ const Sentimain = () => {
                                     <p className='headp'>CONFIDENCE</p>
                                 </div>
                                 <hr />
+                                {loading ? <div className="text-center">
+                                    <div className="spinner-border" role="status">
+                                        <span className="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>: 
                                 <div className="heading">
                                     <p className='resp'>{tag}</p>
                                     <p className='resp' id='percentage'>{conf}%</p>
                                 </div>
+                                }
                                 <hr />
                             </div>
                         </div>
